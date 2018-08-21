@@ -1,0 +1,25 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int masukan,a,b,c,f;
+    
+    cout << "masukan nilai ke - " ;
+    cin >>masukan ;
+    
+    a=1;  b=0;;
+    
+    for(c=1;c<=masukan;c++){
+      f=a+b;
+      a=b;
+      b=f;
+      cout<<" "<< f;
+    }
+    cout<<endl;
+    cout<< "nilai ke - " << masukan << " adalah " << f;
+
+    return 0;
+}
