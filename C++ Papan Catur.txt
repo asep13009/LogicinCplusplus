@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int row=8, col=8, i, j;
+    char board[row][col];
+    
+    for(i = 0; i < row; i++) {
+        for(j = 0; j < col; j++) {
+            if(i % 2== 0) {
+                if(j % 2 == 0) {
+                    board[i][j] = 'x';    
+                }else{
+                    board[i][j] = 'y';    
+                }
+            }else{
+                if(j % 2 == 0) {
+                    board[i][j] = 'm';
+                }else{
+                    board[i][j] = 'n';
+                }
+            }
+        }
+    }
+    for(i = 0; i < row; i++) {
+        for(j = 0; j < col; j++) {
+            printf("%c", board[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}

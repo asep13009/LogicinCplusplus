@@ -1,0 +1,38 @@
+
+#include <iostream>
+#define ARRAY_SIZE(array) (sizeof((array))/sizeof((array[0])))
+using namespace std;
+
+int main()
+{
+   int data[]= {5,2,10,2,7,8};
+   int length= ARRAY_SIZE(data);
+   int i, j, tmp;
+   cout <<"panjang length - "<<length<< endl;
+  
+   cout<<"Data seblum diurutkan : "<<endl;
+   for(i=0; i<length; i++)
+   {
+       cout<<data[i]<<" ";
+   }
+   cout<<endl;
+
+   for(i=0; i<length; i++)
+   {
+       for(j=i; j<length; j++)
+      {
+          if(data[i]>data[j])
+         {
+             tmp = data[i];
+            data[i] = data[j];
+            data[j] = tmp;
+         }
+      }
+   }
+   cout<<"Data setelah diurutkan : "<<endl;
+   for(i=0; i<length; i++)
+   {
+       cout<<data[i]<<" ";
+   }
+    return 0;
+}
